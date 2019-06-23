@@ -11,7 +11,7 @@ class FirstComponent extends Component {
   //   this.handleInclrement = this.handleInclrement.bind(this);
   // }
 
-  handleInclrement = () => {
+  handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
 
@@ -21,7 +21,7 @@ class FirstComponent extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handleInclrement}
+          onClick={this.handleIncrement}
           className="btn btn-secondary btn-sm"
         >
           Increment
