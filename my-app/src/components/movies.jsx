@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { getMovies } from "../services/fakeMovieService";
+import React, { Component } from 'react';
+import { getMovies } from '../services/fakeMovieService';
 class MoviesList extends Component {
   state = {
     movies: getMovies()
@@ -18,7 +18,7 @@ class MoviesList extends Component {
     return (
       <React.Fragment>
         <p>There are {count} movies in the list</p>
-        <table className="table">
+        <table className='table'>
           <thead>
             <tr>
               <th>Title</th>
@@ -37,7 +37,7 @@ class MoviesList extends Component {
                 <td>{movie.dailyRentalRate}</td>
                 <td>
                   <button
-                    className="btn btn-danger btn-sm"
+                    className='btn btn-danger btn-sm'
                     onClick={() => this.handleDelete(movie)}
                   >
                     Delete
