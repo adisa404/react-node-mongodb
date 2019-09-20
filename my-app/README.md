@@ -71,3 +71,8 @@ starting app on may. npm install. update package-lock.json. single quotes
 
 const { length: count } = this.state.movies;
 takes movies length. count is the name of the constant
+
+!!!props includes data that we give to a component. also prop is readonly
+!!!state includes data that is local or private to a component
+
+in counter.jsx we use props to initialize the state
