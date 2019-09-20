@@ -112,3 +112,5 @@ return jsx itd
 
 ralika je u tome sto ne mozemo koristiti this.prop.bla,
 nego u () moramo staviti prop koji smo dobili npr activity i tako mu pristupamo activity.id
+
+pass props or in case of more props we can also use object destructuring ({totalCounters})
