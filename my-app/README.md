@@ -96,3 +96,8 @@ single source of truth, not having state in every component. we will move all th
 component without a state - controlled component
 
 copied navbar from bootstrap
+
+if we want to share values between components that have no relationship,
+we have to lift the state up into the component that contains both of them.
+This means we are moving all methods that handle the state up.
+We need to pass these methods down as props
