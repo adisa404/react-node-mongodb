@@ -1,12 +1,16 @@
 import React from 'react';
-import MoviesList from './components/movies';
+import NavBar from './components/navbar';
+import Counters from './components/counters';
 import './App.css';
 
 function App() {
   return (
-    <main className='container'>
-      <MoviesList />
-    </main>
+    <React.Fragment>
+      <NavBar></NavBar>
+      <main className='container'>
+        <Counters />
+      </main>
+    </React.Fragment>
   );
 }
 
