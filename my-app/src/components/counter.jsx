@@ -11,6 +11,7 @@ class FirstComponent extends Component {
 
   render() {
     // let tagsLi = this.state.tags.map(tag => <li key={tag}>${tag}</li>);
+    console.log('props', this.props);
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
