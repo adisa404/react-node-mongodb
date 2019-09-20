@@ -76,3 +76,17 @@ takes movies length. count is the name of the constant
 !!!state includes data that is local or private to a component
 
 in counter.jsx we use props to initialize the state
+
+add delete button to every counter
+
+the component owning the piece of the state should be the one modifying it
+
+we should have state only in one component. Ex : in counters and not in both counter and counters.
+in the child component we should only rely on the props. This is called 'controlled' component
+bc it doesn't have it's local state.
+
+naming convention
+onDelete in component that rasises the event
+handleDelete() in component that handles the event
+
+pass parameter to method in jsx with arrow function
