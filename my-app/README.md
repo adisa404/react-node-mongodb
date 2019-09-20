@@ -90,3 +90,7 @@ onDelete in component that rasises the event
 handleDelete() in component that handles the event
 
 pass parameter to method in jsx with arrow function
+
+single source of truth, not having state in every component. we will move all the state to the counters component
+
+component without a state - controlled component

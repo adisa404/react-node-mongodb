@@ -1,14 +1,6 @@
 import React, { Component } from 'react';
 
-class FirstComponent extends Component {
-  state = {
-    value: this.props.counter.value
-  };
-
-  handleIncrement = () => {
-    this.setState({ value: this.state.value + 1 });
-  };
-
+class Counter extends Component {
   render() {
     // let tagsLi = this.state.tags.map(tag => <li key={tag}>${tag}</li>);
     console.log('props', this.props);
@@ -16,7 +8,7 @@ class FirstComponent extends Component {
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
-          onClick={this.handleIncrement}
+          onClick={() => this.props.onIncrement(this.props.counter)}
           className='btn btn-secondary btn-sm'
         >
           Increment
@@ -33,14 +25,14 @@ class FirstComponent extends Component {
 
   getBadgeClasses() {
     let classes = 'badge m-2 badge-';
-    classes += this.state.value === 0 ? 'warning' : 'primary';
+    classes += this.props.counter.value === 0 ? 'warning' : 'primary';
     return classes;
   }
 
   formatCount() {
-    const { value: count } = this.state;
+    const { value: count } = this.props.counter;
     return count === 0 ? 'Zero' : count;
   }
 }
 
-export default FirstComponent;
+export default Counter;
