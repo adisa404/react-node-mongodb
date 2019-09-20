@@ -2,21 +2,15 @@ import React, { Component } from 'react';
 
 class FirstComponent extends Component {
   state = {
-    count: 0,
-    tags: ['tag1', 'tag2', 'tag3']
+    count: 0
   };
-
-  // constructor() {
-  //   super();
-  //   this.handleInclrement = this.handleInclrement.bind(this);
-  // }
 
   handleIncrement = () => {
     this.setState({ count: this.state.count + 1 });
   };
 
   render() {
-    let tagsLi = this.state.tags.map(tag => <li key={tag}>${tag}</li>);
+    // let tagsLi = this.state.tags.map(tag => <li key={tag}>${tag}</li>);
     return (
       <div>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
@@ -26,7 +20,6 @@ class FirstComponent extends Component {
         >
           Increment
         </button>
-        <ul>{tagsLi}</ul>
       </div>
     );
   }

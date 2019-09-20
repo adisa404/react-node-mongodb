@@ -66,3 +66,8 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+starting app on may. npm install. update package-lock.json. single quotes
+
+const { length: count } = this.state.movies;
+takes movies length. count is the name of the constant
