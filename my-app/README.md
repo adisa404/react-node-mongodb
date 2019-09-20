@@ -101,3 +101,14 @@ if we want to share values between components that have no relationship,
 we have to lift the state up into the component that contains both of them.
 This means we are moving all methods that handle the state up.
 We need to pass these methods down as props
+
+sfc shortcut
+stateless functional components - nacin kako se definisu componente bes state.
+Razlika je u definiciji jer se umjesto klase koristi funkcija
+
+function NavBar = ()=> {
+return jsx itd
+}
+
+ralika je u tome sto ne mozemo koristiti this.prop.bla,
+nego u () moramo staviti prop koji smo dobili npr activity i tako mu pristupamo activity.id
