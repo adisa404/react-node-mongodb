@@ -114,3 +114,25 @@ ralika je u tome sto ne mozemo koristiti this.prop.bla,
 nego u () moramo staviti prop koji smo dobili npr activity i tako mu pristupamo activity.id
 
 pass props or in case of more props we can also use object destructuring ({totalCounters})
+
+lifecycle phases of a compoenent:
+Mount phase
+instance of a component is created and insereted to the dom
+Update phase
+when we hange the state of the copomonent or give new props
+Unmount phase
+component is removed from the DOM
+
+lifecycle hooks are methods that allow us to hook into certain lifecycle phases and to something
+
+lifecycle hooks used in the mounting phase (displayed in order of calling):
+constructor
+render
+componentDidMount
+
+lifecycle hooks used in the render phase (displayed in order of calling):
+render
+componentDidUpdate
+
+lifecycle hooks used in the unmount phase (displayed in order of calling):
+componentWillUnmount
