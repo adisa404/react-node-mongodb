@@ -1,6 +1,5 @@
 import React from 'react';
 import Movies from './components/movies';
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
