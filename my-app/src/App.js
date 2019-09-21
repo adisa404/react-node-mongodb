@@ -23,6 +23,14 @@ class App extends Component {
     //this.state = this.props.something;
   }
 
+  componentDidMount() {
+    //ajax call
+
+    //update state
+    //this.setState({movies})
+
+    console.log('mounted');
+  }
   handleReset = () => {
     var finalCouners = this.state.counters.map(c => {
       c.value = 0;
