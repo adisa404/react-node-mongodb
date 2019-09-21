@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
 class Counter extends Component {
+  componentDidUpdate(prevProps, prevState) {
+    console.log('prevProps', prevProps);
+    console.log('prevState', prevState);
+    if (prevProps.counter.value !== this.props.counter.value) {
+      // ajax call to get new data
+    }
+  }
   render() {
     // let tagsLi = this.state.tags.map(tag => <li key={tag}>${tag}</li>);
     console.log('props', this.props);

@@ -115,6 +115,8 @@ nego u () moramo staviti prop koji smo dobili npr activity i tako mu pristupamo 
 
 pass props or in case of more props we can also use object destructuring ({totalCounters})
 
+# lifecycle phases
+
 lifecycle phases of a compoenent:
 Mount phase
 instance of a component is created and insereted to the dom
@@ -122,6 +124,8 @@ Update phase
 when we hange the state of the copomonent or give new props
 Unmount phase
 component is removed from the DOM
+
+# lifecycle hooks
 
 lifecycle hooks are methods that allow us to hook into certain lifecycle phases and to something
 
@@ -137,6 +141,8 @@ componentDidUpdate
 lifecycle hooks used in the unmount phase (displayed in order of calling):
 componentWillUnmount
 
+# mounting phase
+
 everytime we add the constructor, we need to call the constructor of the base class super()
 
 constructor()
@@ -150,3 +156,13 @@ but in order to access this.props we need to pass props as the parameter to the 
 
 componentDidMount()
 is the perfect place to do ajax call do get data from the server and then update the state
+
+# updating phase
+
+componentDidUpdate() is called after a component is updated.
+This is the right place to compare old data to new data.
+this method takes two parameters prevProps, prevState
+
+if (prevProps.counter.value !== this.props.counter.value) {
+// ajax call to get new data
+}
