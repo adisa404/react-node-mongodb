@@ -136,3 +136,13 @@ componentDidUpdate
 
 lifecycle hooks used in the unmount phase (displayed in order of calling):
 componentWillUnmount
+
+everytime we add the constructor, we need to call the constructor of the base class super()
+
+in the constructor, we are allowed to change the state directly without using setState.
+In fact if we use setState we will get an error
+
+so we are allowed to do this:
+this.state = this.props.something;
+
+but in order to access this.props we need to pass props as the parameter to the constructor and the base constructor

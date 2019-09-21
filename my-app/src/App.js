@@ -15,6 +15,14 @@ class App extends Component {
     ]
   };
 
+  constructor(props) {
+    super(props);
+
+    console.log('App.js constructor', this.props);
+
+    //this.state = this.props.something;
+  }
+
   handleReset = () => {
     var finalCouners = this.state.counters.map(c => {
       c.value = 0;
