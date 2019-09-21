@@ -166,3 +166,8 @@ this method takes two parameters prevProps, prevState
 if (prevProps.counter.value !== this.props.counter.value) {
 // ajax call to get new data
 }
+
+# unmounting phase
+
+componentWillUnmount() is called just before the component is removed from the DOM
+here is the right lpace to do any kind of cleanup, like timers or listeners

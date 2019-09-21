@@ -15,22 +15,6 @@ class App extends Component {
     ]
   };
 
-  constructor(props) {
-    super(props);
-
-    console.log('App.js constructor', this.props);
-
-    //this.state = this.props.something;
-  }
-
-  componentDidMount() {
-    //ajax call
-
-    //update state
-    //this.setState({movies})
-
-    console.log('mounted');
-  }
   handleReset = () => {
     var finalCouners = this.state.counters.map(c => {
       c.value = 0;
@@ -53,6 +37,14 @@ class App extends Component {
     this.setState({ counters: counters });
   };
 
+  handleDecrement = counter => {
+    // clone the object taht si in the state
+    const counters = [...this.state.counters];
+    const index = counters.indexOf(counter);
+    counters[index] = { ...counter };
+    counters[index].value--;
+    this.setState({ counters: counters });
+  };
   render() {
     return (
       <React.Fragment>
@@ -65,6 +57,7 @@ class App extends Component {
             onReset={this.handleReset}
             onDelete={this.handleDelete}
             onIncrement={this.handleIncrement}
+            onDecrement={this.handleDecrement}
           />
         </main>
       </React.Fragment>
