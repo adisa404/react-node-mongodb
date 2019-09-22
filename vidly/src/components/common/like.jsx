@@ -5,7 +5,7 @@ const Like = props => {
   const classes = props.liked ? heartIcon : heartIcon + '-o';
   return (
     <i
-      onClick={this.props.onLike}
+      onClick={props.onLike}
       className={classes}
       style={{ cursor: 'pointer' }}
     ></i>
