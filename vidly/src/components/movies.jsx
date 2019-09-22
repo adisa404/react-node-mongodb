@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { getMovies } from '../services/fakeMovieService';
 import Like from './common/like';
+import Pagination from './common/pagination';
 
 class MoviesList extends Component {
   state = {
-    movies: getMovies()
+    movies: getMovies(),
+    pageSize: 4
   };
 
   // arrow funnction to bind to counstructor
@@ -22,6 +24,10 @@ class MoviesList extends Component {
     this.setState({ movies: movies });
   };
 
+  handlePageChange = page => {
+    console.log(page);
+  };
+
   render() {
     const { length: count } = this.state.movies;
     if (count === 0) return <p>There are no movies in the list</p>;
@@ -36,6 +42,7 @@ class MoviesList extends Component {
               <th>Genre</th>
               <th>Stock</th>
               <th>Rate</th>
+              <th></th>
               <th />
             </tr>
           </thead>
@@ -64,6 +71,11 @@ class MoviesList extends Component {
             ))}
           </tbody>
         </table>
+        <Pagination
+          totalCount={count}
+          pageSize={this.state.pageSize}
+          onPageChange={this.handlePageChange}
+        />
       </React.Fragment>
     );
   }
