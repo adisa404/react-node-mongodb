@@ -171,3 +171,16 @@ if (prevProps.counter.value !== this.props.counter.value) {
 
 componentWillUnmount() is called just before the component is removed from the DOM
 here is the right lpace to do any kind of cleanup, like timers or listeners
+
+# pagination
+
+itemsCount/pageSize = number of pages
+
+we use lodash to create an array of 1 to pagesCount
+
+# lodash
+
+\_.range(1, pageCount+1).
+We need to set +1 bc this method will not include tha last number itself
+
+Math.ceil - returns an interegr greater or egual to the floating point number
