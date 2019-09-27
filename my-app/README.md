@@ -184,3 +184,9 @@ we use lodash to create an array of 1 to pagesCount
 We need to set +1 bc this method will not include tha last number itself
 
 Math.ceil - returns an interegr greater or egual to the floating point number
+
+in order to use the functions of lodash for an array like "items" we first wrap it to a lodash object
+\_(items)
+
+we update the state by updating the current page by every click on the pagination items.
+we render data per page with paginate function. The new movie list gets generated and used in the render method. We can do this bc the render method gets called everytime we update the state
