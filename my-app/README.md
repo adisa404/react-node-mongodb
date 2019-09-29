@@ -190,3 +190,7 @@ in order to use the functions of lodash for an array like "items" we first wrap 
 
 we update the state by updating the current page by every click on the pagination items.
 we render data per page with paginate function. The new movie list gets generated and used in the render method. We can do this bc the render method gets called everytime we update the state
+
+npm i prop-types@15.6.2 // for type checking
+dodijelimo nasoj pagination class jos jedan property proptype i definisemo tip svim propovima
+Pagination.propTypes

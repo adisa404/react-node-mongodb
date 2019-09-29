@@ -1,5 +1,6 @@
 import React from 'react';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 // number of pages
 // onclick highlight my page I display second batch of movies
 // current page
@@ -35,4 +36,10 @@ const Pagination = props => {
   );
 };
 
+Pagination.propTypes = {
+  totalCount: PropTypes.number.isRequired,
+  pageSize: PropTypes.number.isRequired,
+  currentPage: PropTypes.number.isRequired,
+  onPageChange: PropTypes.func.isRequired
+};
 export default Pagination;

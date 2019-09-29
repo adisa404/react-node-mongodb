@@ -33,7 +33,7 @@ class MoviesList extends Component {
   render() {
     const { length: count } = this.state.movies;
     const { pageSize, currentPage, movies: allMovies } = this.state;
-    debugger;
+
     const movies = paginate(allMovies, currentPage, pageSize);
     if (count === 0) return <p>There are no movies in the list</p>;
 
