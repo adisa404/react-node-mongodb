@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
-//import { getGenres } from './../services/fakeGenreService';
+import React from 'react';
+
 const ListGroup = props => {
-  const { items } = props;
+  const { items, textProperty, valueProperty } = props;
   console.log(items);
   return (
     <ul className='list-goup'>
       {items.map(item => (
-        <li key={item._id} className='list-group-item'>
-          {item.name}
+        <li key={item[valueProperty]} className='list-group-item'>
+          {item[textProperty]}
         </li>
       ))}
     </ul>

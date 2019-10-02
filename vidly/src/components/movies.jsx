@@ -4,7 +4,7 @@ import Like from './common/like';
 import Pagination from './common/pagination';
 import { paginate } from '../utils/paginate';
 import ListGroup from './common/listGroup';
-import { getGenres, genres } from '../services/fakeGenreService';
+import { getGenres } from '../services/fakeGenreService';
 
 class MoviesList extends Component {
   state = {
@@ -53,6 +53,8 @@ class MoviesList extends Component {
         <div className='col-2'>
           <ListGroup
             items={this.state.genres}
+            textProperty='name'
+            valueProperty='_id'
             onItemSelect={this.handleItemSelect}
           ></ListGroup>
         </div>
