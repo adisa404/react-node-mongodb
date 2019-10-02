@@ -194,3 +194,8 @@ we render data per page with paginate function. The new movie list gets generate
 npm i prop-types@15.6.2 // for type checking
 dodijelimo nasoj pagination class jos jedan property proptype i definisemo tip svim propovima
 Pagination.propTypes
+
+listGroup
+
+initialize movies and genres to an empty array. And call fake services in componentDidMount
+We are doing this bc it will take some tim to get the data, and genres and movies need to be iitializes
