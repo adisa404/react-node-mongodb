@@ -3,12 +3,15 @@ import React, { Component } from 'react';
 const ListGroup = props => {
   const { items } = props;
   console.log(items);
-  return <div></div>;
-
-  //const genres = ['All Genres', ...getGenres()];
-  //console.log(genres);
-  // iskoristiti map i vidjeti da li se baremn rendaju
-  //return <React.Fragment></React.Fragment>;
+  return (
+    <ul className='list-goup'>
+      {items.map(item => (
+        <li key={item._id} className='list-group-item'>
+          {item.name}
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default ListGroup;
