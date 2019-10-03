@@ -205,3 +205,5 @@ we use textProperty and valueProperty to make the component more generic
 default props
 
 we don't need to declare a variable when using setState
+
+first filter all movies and then apply pagination
