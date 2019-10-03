@@ -203,3 +203,5 @@ We are doing this bc it will take some time to get the data, and genres and movi
 we use textProperty and valueProperty to make the component more generic
 
 default props
+
+we don't need to declare a variable when using setState
