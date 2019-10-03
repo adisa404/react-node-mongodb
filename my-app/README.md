@@ -198,4 +198,8 @@ Pagination.propTypes
 listGroup
 
 initialize movies and genres to an empty array. And call fake services in componentDidMount
-We are doing this bc it will take some tim to get the data, and genres and movies need to be iitializes
+We are doing this bc it will take some time to get the data, and genres and movies need to be initialized
+
+we use textProperty and valueProperty to make the component more generic
+
+default props
