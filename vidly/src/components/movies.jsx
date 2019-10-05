@@ -46,15 +46,7 @@ class MoviesList extends Component {
     this.setState({ currentGenre: genre, currentPage: 1 });
   };
 
-  handleSort = sortBy => {
-    const sortOption = { ...this.state.sortOption };
-    if (sortOption.sortBy === sortBy) {
-      sortOption.sortOrder = sortOption.sortOrder === 'asc' ? 'desc' : 'asc';
-    } else {
-      sortOption.sortBy = sortBy;
-      sortOption.sortOrder = 'asc';
-    }
-
+  handleSort = sortOption => {
     this.setState({ sortOption: sortOption });
   };
 
@@ -93,6 +85,7 @@ class MoviesList extends Component {
           <p>There are {filtered.length} movies in the list</p>
           <MoviesTable
             movies={movies}
+            sortOption={sortOption}
             onLike={this.handleLike}
             onDelete={this.handleDelete}
             onSort={this.handleSort}

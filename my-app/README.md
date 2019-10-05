@@ -213,3 +213,8 @@ cmd + D -> multiselect
 var chars = this.state.characters;
 chars = \_.orderBy(chars, 'name', 'asc'); // Use Lodash to sort array by 'name'
 this.setState({characters: chars})
+
+we want to expose the logic from the handleSort method. So we move the moviesTable
+from a functional to a class component with a method
+
+we want pass the whole sortOption, so we raise the onSort event in raiseSort()
