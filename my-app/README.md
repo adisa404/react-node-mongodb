@@ -217,4 +217,10 @@ this.setState({characters: chars})
 we want to expose the logic from the handleSort method. So we move the moviesTable
 from a functional to a class component with a method
 
-we want pass the whole sortOption, so we raise the onSort event in raiseSort()
+we want to pass the whole sortOption, so we raise the onSort event in raiseSort()
+
+we are extracting tableHeader to a component
+the interface of this conmponent will be:
+columns - the titles of the columns (array)
+sortOption: object
+onSort: function
