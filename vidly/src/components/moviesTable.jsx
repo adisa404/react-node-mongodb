@@ -14,7 +14,7 @@ class MoviesTable extends Component {
       content: movie => (
         <Like onLike={() => this.props.onLike(movie)} liked={movie.liked} />
       )
-    }, //like
+    },
     {
       key: 'delete',
       content: movie => (
@@ -25,7 +25,7 @@ class MoviesTable extends Component {
           Delete
         </button>
       )
-    } //delete button
+    }
   ];
   render() {
     const { movies, onLike, onDelete, onSort, sortOption } = this.props;
