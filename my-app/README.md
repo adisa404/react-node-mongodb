@@ -318,3 +318,8 @@ for the redirect to work we need
 
 - a registered route
 - a redirect component
+
+### Navigate back in history
+
+this.props.history.push('/products')
+we use .replace('/products') if we don't want the user to return ex. in login pages
