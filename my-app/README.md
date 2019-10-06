@@ -260,6 +260,8 @@ to fix this we can add the exact keyword
 
 <Route path='/' exact component={Home}>
 
+### Switch component
+
 Another solution for this is to use the switch component
 import {Route, Switch} from 'react-router-dom'
 we use Switch to wrap the routes, we don't need the exact keyword
@@ -270,3 +272,15 @@ we use Switch to wrap the routes, we don't need the exact keyword
 
 now on /products only the Products component will be rendered.
 When using switch we need to register the most sepcific one on the top.
+
+### Link component
+
+we use Link to specify links and prevent full page reload
+
+insetad of 'href' we use 'to'
+<li>
+<Link to="/">Home</Link>
+</li>
+<li>
+<Link to="/products">Products</Link>
+</li>
