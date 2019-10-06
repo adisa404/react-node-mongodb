@@ -278,9 +278,19 @@ When using switch we need to register the most sepcific one on the top.
 we use Link to specify links and prevent full page reload
 
 insetad of 'href' we use 'to'
+
 <li>
 <Link to="/">Home</Link>
 </li>
 <li>
 <Link to="/products">Products</Link>
 </li>
+
+### Router props
+
+by default additional information is passed down to the component
+
+<Route path='/products' component={Products} />
+
+but if we want to pass aditional props we use the following notation, we use the render method
+<Route path='/products' render={props => <Products sortBy='example' {...props} />}
