@@ -294,3 +294,11 @@ by default additional information is passed down to the component
 
 but if we want to pass aditional props we use the following notation, we use the render method
 <Route path='/products' render={props => <Products sortBy='example' {...props} />}
+
+### Route parameters
+
+syntax
+:id in path
+
+we can find the passed route parameter in the match object
+{this.props.match.params.id}
