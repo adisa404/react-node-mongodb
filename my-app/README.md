@@ -311,3 +311,10 @@ we should avoid passing optional params, instead it is best to use query string 
 if we pass a query string in the url we can get the params from the location object
 but in order to access them easily we can use the plugin
 npm i query-string
+
+### Redirect
+
+for the redirect to work we need
+
+- a registered route
+- a redirect component
