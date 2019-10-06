@@ -304,3 +304,10 @@ we can find the passed route parameter in the match object
 {this.props.match.params.id}
 
 for optional params use :id?
+
+### Query string params
+
+we should avoid passing optional params, instead it is best to use query string params
+if we pass a query string in the url we can get the params from the location object
+but in order to access them easily we can use the plugin
+npm i query-string
