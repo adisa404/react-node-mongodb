@@ -69,6 +69,10 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/tr
 
 starting app on may. npm install. update package-lock.json. single quotes
 
+### extensions fo vs code
+
+- Auto Import - ES6, TS, JSX, TSX
+
 const { length: count } = this.state.movies;
 takes movies length. count is the name of the constant
 
@@ -224,3 +228,45 @@ the interface of this conmponent will be:
 columns - the titles of the columns (array)
 sortOption: object
 onSort: function
+
+### routing
+
+for routing install library
+npm i react-router-dom
+
+import {BrowserRouter} from 'react-router-dom'
+
+in jsx wrap the app component in BrowserRouter
+
+<BowserRouter><App></BrowserRouter>
+
+This component wraps the history object in browser and passes it down in aour component tree
+
+### register a route
+
+register route in a component-> import {Route} from 'react-router-dom'
+
+we use the Route componnt and pass two props:
+path // on this path
+component // load this component
+
+<Route path='/' component={Home}>
+<Route path='/products' component={Products}>
+
+The alghorithm for routing checks if the url starts with '/products'. Sadly both components will be rendered:
+Home and Products
+
+to fix this we can add the exact keyword
+
+<Route path='/' exact component={Home}>
+
+Another solution for this is to use the switch component
+import {Route, Switch} from 'react-router-dom'
+we use Switch to wrap the routes, we don't need the exact keyword
+<Switch>
+<Route path='/products' component={Products}>
+<Route path='/' component={Home}>
+</Switch>
+
+now on /products only the Products component will be rendered.
+When using switch we need to register the most sepcific one on the top.
