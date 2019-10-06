@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 // onclick highlight my page I display second batch of movies
 // current page
 
-const Pagination = props => {
+const Pagination = ({ totalCount, pageSize, currentPage, onPageChange }) => {
   // itemsCount/pageSize = number of pages
-  const { totalCount, pageSize, currentPage, onPageChange } = props;
   const pagesCount = Math.ceil(totalCount / pageSize);
   if (pagesCount === 1) return null;
 
