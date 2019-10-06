@@ -302,3 +302,5 @@ syntax
 
 we can find the passed route parameter in the match object
 {this.props.match.params.id}
+
+for optional params use :id?

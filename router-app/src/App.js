@@ -21,7 +21,7 @@ class App extends Component {
               path='/products'
               render={props => <Products sortBy='example' {...props} />}
             />
-            <Route path='/posts/:year/:month' component={Posts} />
+            <Route path='/posts/:year?/:month?' component={Posts} />
             <Route path='/admin' component={Dashboard} />
             <Route path='/' component={Home} />
           </Switch>
