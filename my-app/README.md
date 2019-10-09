@@ -246,7 +246,7 @@ This component wraps the history object in browser and passes it down in aour co
 
 register route in a component-> import {Route} from 'react-router-dom'
 
-we use the Route componnt and pass two props:
+we use the Route component and pass two props:
 path // on this path
 component // load this component
 
@@ -323,3 +323,14 @@ for the redirect to work we need
 
 this.props.history.push('/products')
 we use .replace('/products') if we don't want the user to return ex. in login pages
+
+- create 2 components
+  customers
+  rentals
+
+for /xyz go to notfound
+
+/ redirect to movies
+
+in movies list the title should be a link and forward to the movieform component
+onSave takes us back to the movies page
