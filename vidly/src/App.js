@@ -13,7 +13,7 @@ function App() {
     <main className='container'>
       <NavBar></NavBar>
       <Switch>
-        <Route path='/movies/movieForm/:id' component={MovieForm} />
+        <Route path='/moviesForm/:id' component={MovieForm} />
         <Route path='/movies/' component={Movies} />
         <Route path='/customers/' component={Customers} />
         <Route path='/rentals/' component={Rentals} />
