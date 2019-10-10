@@ -357,6 +357,8 @@ autofocus via class instead of code
 
 <input autoFocus
 
+# controlled elements
+
 when dealing with data in forms we should rely on a single source of truth
 --> on the state in the form. So the input files should not have their own state.
 we make them beeing stateless with controlled elements,
