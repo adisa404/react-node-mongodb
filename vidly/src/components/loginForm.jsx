@@ -26,8 +26,7 @@ class LoginForm extends Component {
     e.preventDefault();
 
     const errors = this.validate();
-    console.log(errors);
-    this.setState({ errors });
+    this.setState({ errors: errors || {} });
 
     if (errors) return;
     // call the server, save changes, redirect
@@ -40,19 +39,21 @@ class LoginForm extends Component {
     this.setState({ account });
   };
   render() {
-    const { account } = this.state;
+    const { account, errors } = this.state;
     return (
       <div>
         <h1>Login</h1>
         <form onSubmit={this.handleSubmit}>
           <Input
             value={account.username}
+            error={errors.username}
             onChange={this.handleChange}
             name='username'
             label='Username'
           />
           <Input
             value={account.password}
+            error={errors.password}
             onChange={this.handleChange}
             name='password'
             label='Password'

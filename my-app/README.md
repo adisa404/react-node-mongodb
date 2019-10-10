@@ -377,3 +377,9 @@ is done with
 
   const errors = this.validate();
   this.setState({ errors });
+
+  we update the state - updateing the state causes rerending to happen
+  and we will be abl to see the error messages instantly
+
+  display validation messages
+  {error && <div className="alert alert-danger">{error}</div>} // render div only if error has a value
