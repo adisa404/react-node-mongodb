@@ -7,12 +7,14 @@ import './App.css';
 import NavBar from './components/navBar';
 import NotFound from './components/notFound';
 import MovieForm from './components/movieForm';
+import LoginForm from './components/loginForm';
 
 function App() {
   return (
     <main className='container'>
       <NavBar></NavBar>
       <Switch>
+        <Route path='/login' component={LoginForm} />>
         <Route path='/moviesForm/:id' component={MovieForm} />
         <Route path='/movies/' component={Movies} />
         <Route path='/customers/' component={Customers} />

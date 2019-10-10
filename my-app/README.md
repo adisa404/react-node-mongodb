@@ -334,3 +334,19 @@ for /xyz go to notfound
 
 in movies list the title should be a link and forward to the movieform component
 onSave takes us back to the movies page
+
+### Login
+
+create component
+register new route
+
+### react refs
+
+if we really need to access the Dom we can use react refr, but there is also a better way!
+When using refs we first define a ref:
+
+username = React.createRef(); // class prop
+
+// usage in function
+this.username.current.value
+<input ref={this.username}>
