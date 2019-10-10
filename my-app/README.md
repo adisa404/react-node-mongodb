@@ -350,3 +350,16 @@ username = React.createRef(); // class prop
 // usage in function
 this.username.current.value
 <input ref={this.username}>
+
+### Forms
+
+autofocus via class instead of code
+
+<input autoFocus
+
+when dealing with data in forms we should rely on a single source of truth
+--> on the state in the form. So the input files should not have their own state.
+we make them beeing stateless with controlled elements,
+which is the same as controlled components tj. components without state
+
+These elements will not have their own state, we use props to set it's value
