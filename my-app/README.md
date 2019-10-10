@@ -367,3 +367,13 @@ which is the same as controlled components tj. components without state
 These elements will not have their own state, we use props to set it's value
 
 handle multiple inputs with bracket notation
+
+# validation
+
+is done with
+
+- the errors object in the state
+- this.validate() in the handleSubmit()
+
+  const errors = this.validate();
+  this.setState({ errors });

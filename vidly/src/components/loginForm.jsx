@@ -3,12 +3,33 @@ import Input from './common/input';
 
 class LoginForm extends Component {
   state = {
-    account: { username: '', password: '' }
+    account: { username: '', password: '' },
+    errors: {}
   };
 
+  validate = () => {
+    const errors = {};
+
+    const { account } = this.state;
+
+    if (account.username.trim() === '') {
+      errors.username = 'Username is required.';
+    }
+    if (account.password.trim() === '') {
+      errors.password = 'Password is required.';
+    }
+
+    //check if any keys are in the object
+    return Object.keys(errors).length === 0 ? null : errors;
+  };
   handleSubmit = e => {
     e.preventDefault();
 
+    const errors = this.validate();
+    console.log(errors);
+    this.setState({ errors });
+
+    if (errors) return;
     // call the server, save changes, redirect
     console.log('submitted');
   };
@@ -23,7 +44,6 @@ class LoginForm extends Component {
     return (
       <div>
         <h1>Login</h1>
-
         <form onSubmit={this.handleSubmit}>
           <Input
             value={account.username}
