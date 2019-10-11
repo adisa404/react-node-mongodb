@@ -406,3 +406,12 @@ is done with
   we dont want to hardcode username, so we use the computed property in ES6 [name]
   we will create a subschema for this method
   Joi.validate(obj, schema); returns a big object result.error.... so we take just error
+
+# reusable form component
+
+we want every form to have the errors property in the state object
+we will create a new file form.jsx adn LoginForm will inherit from it
+
+every form should have a data property in the state and an errors property in the state
+state = { data:{}, errors:{} };
+we don't need the render method, bc this Form component is not supposed to render anything
