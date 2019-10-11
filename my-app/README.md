@@ -395,3 +395,9 @@ is done with
 
   define schema object
   joi terminates validation as soon as it finds an error - this is called abortEarly, so we set it to false
+
+  assign user friendly name with 'label'
+  password: Joi.string()
+  .required()
+  .label('Password')
+  };

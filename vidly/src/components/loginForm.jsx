@@ -9,13 +9,16 @@ class LoginForm extends Component {
   };
 
   schema = {
-    username: Joi.string().required(),
-    password: Joi.string().required()
+    username: Joi.string()
+      .required()
+      .label('Username'),
+    password: Joi.string()
+      .required()
+      .label('Password')
   };
   validate = () => {
-    const result = Joi.validate(this.state.account, this.schema, {
-      abortEarly: false
-    });
+    const options = { abortEarly: false };
+    const result = Joi.validate(this.state.account, this.schema, options);
     console.log(result);
     if (!result.error) return null;
 
