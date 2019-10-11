@@ -383,3 +383,8 @@ is done with
 
   display validation messages
   {error && <div className="alert alert-danger">{error}</div>} // render div only if error has a value
+
+  # validation on input change
+
+  same approach as before, but we don't use this.validate, bc this will validate the whole form
+  we want to walidate a single input with this.validateProperty

@@ -22,6 +22,16 @@ class LoginForm extends Component {
     //check if any keys are in the object
     return Object.keys(errors).length === 0 ? null : errors;
   };
+
+  validateProperty = input => {
+    let format = /[ !#$%^&*()_+\-=[\]{};':"\\|,<>/?]/;
+    let message = null;
+    if (input.value.trim() === '' || format.test(input.value)) {
+      message = 'empty or contains special characters';
+    }
+    return message;
+  };
+
   handleSubmit = e => {
     e.preventDefault();
 
@@ -34,9 +44,16 @@ class LoginForm extends Component {
   };
 
   handleChange = ({ currentTarget: input }) => {
+    const errors = { ...this.state.errors };
+    const errorMessage = this.validateProperty(input);
+    //ex. errors.username
+    if (errorMessage) errors[input.name] = errorMessage;
+    else delete errors[input.name];
+
     const account = { ...this.state.account };
     account[input.name] = input.value;
-    this.setState({ account });
+
+    this.setState({ account, errors });
   };
   render() {
     const { account, errors } = this.state;
