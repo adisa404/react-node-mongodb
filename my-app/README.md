@@ -387,4 +387,11 @@ is done with
   # validation on input change
 
   same approach as before, but we don't use this.validate, bc this will validate the whole form
-  we want to walidate a single input with this.validateProperty
+  we want to validate a single input with this.validateProperty
+
+  # validation using joi
+
+  npm i joi-browser
+
+  define schema object
+  joi terminates validation as soon as it finds an error - this is called abortEarly, so we set it to false
