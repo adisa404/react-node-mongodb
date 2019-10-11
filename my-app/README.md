@@ -415,3 +415,11 @@ we will create a new file form.jsx adn LoginForm will inherit from it
 every form should have a data property in the state and an errors property in the state
 state = { data:{}, errors:{} };
 we don't need the render method, bc this Form component is not supposed to render anything
+
+we can get the following params over the rest operator
+value={value}
+onChange={onChange}
+type={type}
+
+like this:
+{...rest}
