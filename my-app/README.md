@@ -401,3 +401,8 @@ is done with
   .required()
   .label('Password')
   };
+
+  rewrite validateProperty()
+  we dont want to hardcode username, so we use the computed property in ES6 [name]
+  we will create a subschema for this method
+  Joi.validate(obj, schema); returns a big object result.error.... so we take just error

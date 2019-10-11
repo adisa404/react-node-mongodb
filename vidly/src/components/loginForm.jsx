@@ -19,7 +19,6 @@ class LoginForm extends Component {
   validate = () => {
     const options = { abortEarly: false };
     const result = Joi.validate(this.state.account, this.schema, options);
-    console.log(result);
     if (!result.error) return null;
 
     const errors = {};
@@ -32,13 +31,11 @@ class LoginForm extends Component {
     return errors;
   };
 
-  validateProperty = input => {
-    let format = /[ !#$%^&*()_+\-=[\]{};':"\\|,<>/?]/;
-    let message = null;
-    if (input.value.trim() === '' || format.test(input.value)) {
-      message = 'empty or contains special characters';
-    }
-    return message;
+  validateProperty = ({ name, value }) => {
+    const obj = { [name]: value };
+    const schema = { [name]: this.schema[name] };
+    const { error } = Joi.validate(obj, schema);
+    return error ? error.details[0].message : null;
   };
 
   handleSubmit = e => {
