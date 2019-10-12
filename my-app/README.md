@@ -423,3 +423,29 @@ type={type}
 
 like this:
 {...rest}
+
+# new and edit from
+
+ako postoji id u Url onda je edit form
+
+moramo pristupiti data u nasoj formi i tako cemo populirati input fieldove
+
+create new component and new method renderSelect
+<label for="exampleFormControlSelect2">Example multiple select</label>
+<select multiple class="form-control" id="exampleFormControlSelect2">
+
+<option>1</option>
+<option>2</option>
+<option>3</option>
+<option>4</option>
+<option>5</option>
+</select>
+
+in schema id is not required bc when creating a new movie we don't have an Id
+
+1. in componentDidMount we get the genres and update the genres in the state
+2. check if new movie or existing, if new movie, then return (we won't populate the form with data)
+3. get movieById, if movie is falsy, then this.props.match.history.replace('/not-found');
+4. map to view model, bc data on the server is not what we display // map to schema
+5. update state data: this.mapToViewModel
+6. saveMovie() // from fake movieservice
