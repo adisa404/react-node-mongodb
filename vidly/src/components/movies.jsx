@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getMovies } from '../services/fakeMovieService';
+import { getMovies, getMovieByTitle } from '../services/fakeMovieService';
 import Pagination from './common/pagination';
 import { paginate } from '../utils/paginate';
 import ListGroup from './common/listGroup';
@@ -7,6 +7,7 @@ import { getGenres } from '../services/fakeGenreService';
 import MoviesTable from './moviesTable';
 import _ from 'lodash';
 import { Link } from 'react-router-dom';
+import SearchBox from './searchBox';
 
 class MoviesList extends Component {
   state = {
@@ -14,7 +15,8 @@ class MoviesList extends Component {
     pageSize: 4,
     currentPage: 1,
     genres: [],
-    sortOption: { sortBy: 'title', sortOrder: 'asc' }
+    sortOption: { sortBy: 'title', sortOrder: 'asc' },
+    searchQuery: ''
   };
 
   componentDidMount() {
@@ -49,6 +51,13 @@ class MoviesList extends Component {
 
   handleSort = sortOption => {
     this.setState({ sortOption: sortOption });
+  };
+
+  handleSearch = event => {
+    console.log('handleSearch', event.target.value);
+    this.setState({ searchQuery: event.target.value });
+    this.setState({ movies: getMovieByTitle(event.target.value) });
+    console.log(getMovieByTitle(event.target.value));
   };
 
   getPageData = () => {
@@ -93,6 +102,7 @@ class MoviesList extends Component {
             <div className='btn btn-primary mb-4'>New Movie</div>
           </Link>
           <p>There are {totalCount} movies in the list</p>
+          <SearchBox onChange={this.handleSearch} />
           <MoviesTable
             movies={movies}
             sortOption={sortOption}

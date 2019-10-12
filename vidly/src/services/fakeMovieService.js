@@ -1,4 +1,5 @@
 import * as genresAPI from './fakeGenreService';
+import _ from 'lodash';
 
 const movies = [
   {
@@ -82,6 +83,10 @@ export function getMovies() {
 
 export function getMovie(id) {
   return movies.find(m => m._id === id);
+}
+
+export function getMovieByTitle(title) {
+  return movies.filter(m => m.title.toLowerCase().includes(title));
 }
 
 export function saveMovie(movie) {

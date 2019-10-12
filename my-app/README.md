@@ -449,3 +449,25 @@ in schema id is not required bc when creating a new movie we don't have an Id
 4. map to view model, bc data on the server is not what we display // map to schema
 5. update state data: this.mapToViewModel
 6. saveMovie() // from fake movieservice
+
+### searchbox
+
+from child to parent
+
+const SearchBox = ({ onChange }) => {
+return (
+
+<div className='form-group'>
+<input className='form-control' onChange={onChange} />
+</div>
+);
+};
+
+in parent// use arrow functions always
+handleChange = event => {
+console.log('handleChange', event.target.value);
+this.setState({ searchQuery: event.target.value });
+
+    //console.log(getMovieByTitle(event.target.value));
+
+};
