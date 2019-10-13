@@ -585,3 +585,31 @@ import {toast} from 'react-toastify';
 - npm i raven-js (maybe not needed bc of change in doucmentation)
 - npm install @sentry/browser
   Sentry.captureException(error);
+
+### homebrew
+
+- package manager for mac OS
+
+visit homebrew page + copy command:
+/usr/bin/ruby -e "\$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+brew tap mongodb/brew
+
+### mongo db
+
+sudo mkdir -p /data/db
+brew install mongodb/brew/mongodb-community
+
+sudo mkdir -p /data/db
+
+ad privilages to dir:
+sudo chown -R `ìd -un` /data/db - nije propradilo
+ali
+sudo chown `id -u` /data/db - jeste
+
+run mongo deamon:
+mongod
+
+node seed.js (napravio samo dvije mongo baze u vidly folderu)
+
+node index.js (start the node app)
