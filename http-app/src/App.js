@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import httpService from './services/httpService';
+import config from './config.json';
 import './App.css';
-
-const apiEndpoint = 'https://jsonplaceholder.typicode.com/posts';
 
 class App extends Component {
   state = {
@@ -10,14 +9,14 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    const response = await httpService.get(apiEndpoint);
+    const response = await httpService.get(config.apiEndpoint);
     const { data: posts } = response;
     this.setState({ posts });
   }
 
   handleAdd = async () => {
     const obj = { title: 'a', body: 'b' };
-    const response = await httpService.post(apiEndpoint, obj);
+    const response = await httpService.post(config.apiEndpoint, obj);
     const { data: post } = response;
     console.log('post', post);
 
@@ -27,7 +26,7 @@ class App extends Component {
 
   handleUpdate = async post => {
     post.title = 'UPDATED';
-    await httpService.put(apiEndpoint + '/' + post.id, post);
+    await httpService.put(config.apiEndpoint + '/' + post.id, post);
 
     // clone post
     const posts = [...this.state.posts];
@@ -43,7 +42,7 @@ class App extends Component {
     this.setState({ posts });
 
     try {
-      await httpService.delete(apiEndpoint + '/' + post.id);
+      await httpService.delete(config.apiEndpoint + '/' + post.id);
     } catch (ex) {
       //ex.request
       //ex.response
