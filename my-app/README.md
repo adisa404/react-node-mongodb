@@ -511,9 +511,16 @@ get,
 post,
 patch (update one or more properties) axios.put(apiEndpoint + '/' +post.id, post);
 put (update all properties) axios.patch(apiEndpoint +'/', {title: post.title})
+delete
 
 // clone post
 const posts = [...this.state.posts];
 const postIndex = posts.indexOf(post);
 posts[postIndex] = {...post}; // create new object, and spread post
 this.setState({posts});
+
+delete// get all data from state except the one obj we are deleteing. Update state
+
+await axios.delete(apiEndpoint + '/' + post.id);
+const posts = this.state.posts.filter(p => p.id !== post.id);
+this.setState({ posts });
