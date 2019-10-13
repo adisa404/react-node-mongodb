@@ -505,3 +505,15 @@ POST
 UPDATE
 DELETE
 OPTIONS// if the request comes from another domain ex. FE and BE are hosted on diff domains
+
+Axios methods:
+get,
+post,
+patch (update one or more properties) axios.put(apiEndpoint + '/' +post.id, post);
+put (update all properties) axios.patch(apiEndpoint +'/', {title: post.title})
+
+// clone post
+const posts = [...this.state.posts];
+const postIndex = posts.indexOf(post);
+posts[postIndex] = {...post}; // create new object, and spread post
+this.setState({posts});
