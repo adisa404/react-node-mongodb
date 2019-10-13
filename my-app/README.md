@@ -570,3 +570,11 @@ axios.interceptors.response.use(null, error)
 
 expected errors: we only return a rejected promise and don't log the message
 either way we return the rejected promise
+
+### toast notifications
+
+npm i react-toastify
+
+import {ToastContainer} from 'react-toastify' // to get the component
+import 'react-toastify/dist/ReactToastify.css';
+import {toast} from 'react-toastify';
