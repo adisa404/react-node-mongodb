@@ -555,7 +555,8 @@ ex.response.status === 404
 ### Axios interceptors
 
 used to intercept requests and responses
-if an error occures we log it in one place
+if an error occures we log it in one place. The point of this is to log unexpected errors in one place
+and not pulute the code and try catch blocks
 
 axios.interceptors.response.use() - takes 2 params
 2 params - 2 functions that will be called
