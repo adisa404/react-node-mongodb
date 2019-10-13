@@ -495,3 +495,13 @@ the right place to get data is in ComponentDidMount()
 
 axios.get returns a promise
 promise - is a result of an async operation. an operation taht is going to ccomplete in the future
+
+the response we get with axios.get has a data property
+
+### Http Request methods
+
+GET
+POST
+UPDATE
+DELETE
+OPTIONS// if the request comes from another domain ex. FE and BE are hosted on diff domains
