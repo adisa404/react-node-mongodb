@@ -524,3 +524,14 @@ delete// get all data from state except the one obj we are deleteing. Update sta
 await axios.delete(apiEndpoint + '/' + post.id);
 const posts = this.state.posts.filter(p => p.id !== post.id);
 this.setState({ posts });
+
+### optimistic vs pessimistic updates
+
+# pessimistic
+
+- call the server first and then update the state(UI)
+
+# optimistic
+
+- update the state (UI) first and then call the server.
+- also write code in case calling the server goes wrong
