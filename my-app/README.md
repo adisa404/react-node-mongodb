@@ -535,3 +535,37 @@ this.setState({ posts });
 
 - update the state (UI) first and then call the server.
 - also write code in case calling the server goes wrong
+
+### expected vs unexpected errors
+
+# Expected (404: not found, 400: bad request) - Client errors
+
+// - we are not logging these
+// - display a specific error message
+
+# Unexpected (network down, server down, db down, bug)
+
+// - log them
+// - display a generic and friendly error message
+
+ex.response.status is a number not a string
+
+ex.response.status === 404
+
+### Axios interceptors
+
+used to intercept requests and responses
+if an error occures we log it in one place
+
+axios.interceptors.response.use() - takes 2 params
+2 params - 2 functions that will be called
+1st function will be called when the response is successful
+2nd function will be called if the response includes an error
+
+axios.interceptors.response.use(success, error)
+
+we will not intercept successful responses:
+axios.interceptors.response.use(null, error)
+
+expected errors: we only return a rejected promise and don't log the message
+either way we return the rejected promise
