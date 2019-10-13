@@ -44,7 +44,7 @@ class App extends Component {
     this.setState({ posts });
 
     try {
-      await httpService.delete(config.apiEndpoint + '/' + post.id);
+      await httpService.delete('d' + config.apiEndpoint + '/' + post.id);
     } catch (ex) {
       //ex.request
       //ex.response

@@ -578,3 +578,10 @@ npm i react-toastify
 import {ToastContainer} from 'react-toastify' // to get the component
 import 'react-toastify/dist/ReactToastify.css';
 import {toast} from 'react-toastify';
+
+### log errors mith logging as a service provider
+
+- one of them is sentry. sign up at https://sentry.io
+- npm i raven-js (maybe not needed bc of change in doucmentation)
+- npm install @sentry/browser
+  Sentry.captureException(error);
