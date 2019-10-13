@@ -492,3 +492,6 @@ Axios
 npm i axios
 
 the right place to get data is in ComponentDidMount()
+
+axios.get returns a promise
+promise - is a result of an async operation. an operation taht is going to ccomplete in the future
