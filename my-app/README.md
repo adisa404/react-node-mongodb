@@ -471,3 +471,24 @@ this.setState({ searchQuery: event.target.value });
     //console.log(getMovieByTitle(event.target.value));
 
 };
+ja sam update state of movies u onChange metodi, a on je promjenio koliko s evraca filomvy u getpageData metodi
+
+### http-app
+
+npm install
+
+### json placeholder
+
+https://jsonplaceholder.typicode.com/
+
+json view chrome extension
+
+### sending http requests:
+
+Fetch API
+jQuery AJAX
+Axios
+
+npm i axios
+
+the right place to get data is in ComponentDidMount()
