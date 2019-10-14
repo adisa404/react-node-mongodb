@@ -613,3 +613,15 @@ mongod
 node seed.js (napravio samo dvije mongo baze u vidly folderu)
 
 node index.js (start the node app)
+
+### movie service
+
+POST /movies
+PUT /movies/id
+GET /movies/id
+GET /movies/id
+DELETE /movies/id
+
+in the service
+
+// if the movie has an Id - update it and get rid of the id
