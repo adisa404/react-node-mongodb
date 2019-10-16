@@ -625,3 +625,7 @@ DELETE /movies/id
 in the service
 
 // if the movie has an Id - update it and get rid of the id
+
+### register user
+
+post user obj to localhost:3900/api/users
