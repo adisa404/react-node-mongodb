@@ -660,3 +660,5 @@ we pass th curent user to Navbar
 
 we use window.location = '/'; bcs componentDidMount only loads once, but we need
 a full reload of the page after login
+
+an exportet default can be importet with any name
