@@ -635,3 +635,6 @@ post user obj to localhost:3900/api/users
 for login we send the credentials to
 
 localhost:3900/api/auth
+
+get jwt from the awaited response
+store jwt token in the local storage
