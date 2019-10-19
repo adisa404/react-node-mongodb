@@ -641,3 +641,6 @@ store jwt token in the local storage
 
 when a header stars with x - it is not part of the standard protocol
 x-auth-token - header containing the token
+
+api-node command for mongodb:
+mongod
