@@ -662,3 +662,7 @@ we use window.location = '/'; bcs componentDidMount only loads once, but we need
 a full reload of the page after login
 
 an exportet default can be importet with any name
+
+with this
+axios.defaults.headers.common
+we set headers on all kind of http requests
