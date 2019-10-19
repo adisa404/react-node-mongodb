@@ -638,3 +638,6 @@ localhost:3900/api/auth
 
 get jwt from the awaited response
 store jwt token in the local storage
+
+when a header stars with x - it is not part of the standard protocol
+x-auth-token - header containing the token
