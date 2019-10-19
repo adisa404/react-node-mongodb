@@ -636,6 +636,8 @@ for login we send the credentials to
 
 localhost:3900/api/auth
 
+### jwt
+
 get jwt from the awaited response
 store jwt token in the local storage
 
@@ -648,3 +650,13 @@ we can whitelist the nonstandard header with:
 
 api-node command for mongodb:
 mongod
+
+jwt.io debugger
+decode jwt in order to get the current user name without a roundtrip to the db
+
+just as every update od the state will cause the component to rerender
+this.setState({ user: currentUserObj });
+we pass th curent user to Navbar
+
+we use window.location = '/'; bcs componentDidMount only loads once, but we need
+a full reload of the page after login
