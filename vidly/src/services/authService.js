@@ -5,6 +5,8 @@ import jwtDecode from 'jwt-decode';
 const url = apiEndpoint + '/auth';
 const tokenKey = 'token';
 
+httpService.setJwt(getJwt());
+
 export async function login(email, password) {
   const { data: jwt } = await httpService.post(url, {
     email: email,

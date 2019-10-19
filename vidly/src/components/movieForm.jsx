@@ -5,7 +5,6 @@ import { getMovie, saveMovie } from '../services/movieService';
 import { getGenres } from '../services/genreService';
 
 class MovieForm extends Form {
-  // = ({ match, history })
   state = {
     data: {
       title: '',
@@ -70,6 +69,7 @@ class MovieForm extends Form {
 
   doSubmit = async () => {
     await saveMovie(this.state.data);
+
     this.props.history.push('/movies');
   };
 

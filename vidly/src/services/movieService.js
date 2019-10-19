@@ -22,7 +22,7 @@ export function saveMovie(movie) {
     delete body._id;
     return httpService.put(movieUrl(movie._id), body);
   }
-
+  debugger;
   return httpService.post(url, movie);
 }
 
