@@ -639,8 +639,12 @@ localhost:3900/api/auth
 get jwt from the awaited response
 store jwt token in the local storage
 
+the jwt comes with the response in the headers. it can be stored in the response upon user registration.
 when a header stars with x - it is not part of the standard protocol
 x-auth-token - header containing the token
+
+we can whitelist the nonstandard header with:
+.header("access-control-expose-header")
 
 api-node command for mongodb:
 mongod
