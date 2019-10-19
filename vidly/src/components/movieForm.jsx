@@ -73,7 +73,6 @@ class MovieForm extends Form {
     this.props.history.push('/movies');
   };
 
-  //this.state.data["genre"].name
   render() {
     console.log(this.state.genres);
     return (

@@ -629,3 +629,9 @@ in the service
 ### register user
 
 post user obj to localhost:3900/api/users
+
+### login user
+
+for login we send the credentials to
+
+localhost:3900/api/auth
