@@ -683,3 +683,19 @@ but we are still able to acces /movies/new
 
 user render method in routes. check if user is logged in then render the component
 if not redirect
+
+to Routes or protectedRoutes we either pass components or the render method. If the component is null we pass the render method
+
+we can use the rest operator for additional props
+
+router documentation:
+we can pass in 'to' an object instead of string
+<Redirect
+to={{
+    pathname: "/login",
+    search: "?utm=your+face",
+    state: { referrer: currentLocation }
+  }}
+/>
+
+https://reacttraining.com/react-router/web/api/Redirect
