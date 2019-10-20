@@ -676,3 +676,10 @@ isAdmin: true
 
 if user is logged in show 'new' button
 pass current user to movies component
+
+but we are still able to acces /movies/new
+
+# protect routes
+
+user render method in routes. check if user is logged in then render the component
+if not redirect
