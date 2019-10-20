@@ -101,6 +101,8 @@ class MoviesList extends Component {
   render() {
     const { length: count } = this.state.movies;
     const { pageSize, currentPage, sortOption } = this.state;
+    const { user } = this.props;
+    console.log('user', user);
 
     const { totalCount, data: movies } = this.getPageData();
     if (count === 0) return <p>There are no movies in the list</p>;
@@ -115,9 +117,11 @@ class MoviesList extends Component {
           ></ListGroup>
         </div>
         <div className='col'>
-          <Link to='/movies/new'>
-            <div className='btn btn-primary mb-4'>New Movie</div>
-          </Link>
+          {user && (
+            <Link to='/movies/new'>
+              <div className='btn btn-primary mb-4'>New Movie</div>
+            </Link>
+          )}
           <p>There are {totalCount} movies in the list</p>
           <SearchBox onChange={this.handleSearch} />
           <MoviesTable

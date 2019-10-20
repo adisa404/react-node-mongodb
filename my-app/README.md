@@ -668,3 +668,11 @@ axios.defaults.headers.common
 we set headers on all kind of http requests
 
 fix bidirectional dependency
+
+if delete doesn't work - make user admin in db manually
+isAdmin: true
+
+### authorization
+
+if user is logged in show 'new' button
+pass current user to movies component
