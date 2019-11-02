@@ -699,3 +699,13 @@ to={{
 />
 
 https://reacttraining.com/react-router/web/api/Redirect
+
+### environment variables
+
+add .env file to client app!!!
+
+get .env variables with process.env
+
+### production build
+
+npm run build
