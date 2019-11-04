@@ -708,4 +708,52 @@ get .env variables with process.env
 
 ### production build
 
+create optimized production build with:
 npm run build
+
+with this command the environment variables from .env.priduction will be taken
+
+created folder located in /build
+
+# host the build package we created locally with
+
+npm i -g serve
+serve -s build
+
+now our app (package) is hosted on port 5000
+
+### setup heroku
+
+1. create account br1samja!
+2. download heroku cli
+
+3. with homebrew
+
+use heroku
+
+1. /vidly heroku -v
+2. /vidly heroku login -i// login over console
+
+# setup mlab
+
+mlab for hosting mongodb in the cloud
+
+1. clreate new account at mlab.com
+2. follow the checklist to get started:
+
+- build your first cluster
+- create your first db user
+- whitelist your ip addresss
+- load sample data (optional)
+- connect to your cluster
+
+/api-node
+
+heroku create
+Creating app... done, ⬢ blooming-gorge-63457 // our application
+https://blooming-gorge-63457.herokuapp.com/ | https://git.heroku.com/blooming-gorge-63457.git
+
+backend app https://blooming-gorge-63457.herokuapp.com/
+
+connect our git
+heroku git:remote -a blooming-gorge-63457
