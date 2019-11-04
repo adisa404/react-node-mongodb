@@ -1,7 +1,9 @@
-import { apiEndpoint } from '../../src/config.json';
 import httpService from './httpService';
+import Axios from 'axios';
 
-const url = apiEndpoint + '/movies';
+Axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
+const url = '/movies';
 
 function movieUrl(id) {
   return `${url}/${id}`;

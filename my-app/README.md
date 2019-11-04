@@ -757,3 +757,9 @@ backend app https://blooming-gorge-63457.herokuapp.com/
 
 connect our git
 heroku git:remote -a blooming-gorge-63457
+
+git push heroku master - didn't work
+
+### set env variables in heroku
+
+Adisas-MBP:api-node adisamrvoljak\$ heroku config:set vidly_db=mongodb+srv://vidly_user:1234@vidly-1etyp.mongodb.net/test?retryWrites=true&w=majority

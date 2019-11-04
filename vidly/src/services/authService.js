@@ -1,8 +1,10 @@
-import { apiEndpoint } from '../../src/config.json';
 import httpService from './httpService';
 import jwtDecode from 'jwt-decode';
+import Axios from 'axios';
 
-const url = apiEndpoint + '/auth';
+Axios.defaults.baseURL = process.env.REACT_APP_API_URL;
+
+const url = '/auth';
 const tokenKey = 'token';
 
 httpService.setJwt(getJwt());
