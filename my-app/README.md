@@ -763,6 +763,7 @@ git push heroku master - didn't work
 ### set env variables in heroku
 
 Adisas-MBP:api-node adisamrvoljak\$ heroku config:set vidly_db=mongodb+srv://vidly_user:1234@vidly-1etyp.mongodb.net/test?retryWrites=true&w=majority
+//"mongodb://localhost/vidly",
 
 ### prepare frontend for deployment
 
@@ -781,3 +782,8 @@ open app with heroku open
 git subtree push --prefix web heroku master, where web is the folder
 
 sudo git subtree push --prefix api-node heroku master
+
+### push repo to heroku repo - now for FE
+
+heroku git:remote -a vidly-disa
+git subtree push --prefix vidly heroku master
