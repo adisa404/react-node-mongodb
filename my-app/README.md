@@ -763,3 +763,19 @@ git push heroku master - didn't work
 ### set env variables in heroku
 
 Adisas-MBP:api-node adisamrvoljak\$ heroku config:set vidly_db=mongodb+srv://vidly_user:1234@vidly-1etyp.mongodb.net/test?retryWrites=true&w=majority
+
+### prepare frontend for deployment
+
+heroku create \$APP_NAME --buildpack mars/create-react-app
+
+heroku create vidly-disa --buildpack mars/create-react-app
+
+Creating ⬢ vidly-disa... done
+Setting buildpack to mars/create-react-app... done
+https://vidly-disa.herokuapp.com/ | https://git.heroku.com/vidly-disa.git
+
+open app with heroku open
+
+### procfile
+
+react-scripts start
