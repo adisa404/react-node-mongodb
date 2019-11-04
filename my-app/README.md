@@ -778,4 +778,6 @@ open app with heroku open
 
 ### procfile
 
-react-scripts start
+git subtree push --prefix web heroku master, where web is the folder
+
+sudo git subtree push --prefix api-node heroku master
