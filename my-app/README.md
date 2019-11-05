@@ -738,7 +738,7 @@ use heroku
 
 mlab for hosting mongodb in the cloud
 
-1. clreate new account at mlab.com
+1. clreate new account at mlab.com // https://cloud.mongodb.com
 2. follow the checklist to get started:
 
 - build your first cluster

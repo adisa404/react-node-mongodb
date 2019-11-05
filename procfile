@@ -1,2 +1,0 @@
-api: node api-node/index.js
-web: cd vidly && npm start
